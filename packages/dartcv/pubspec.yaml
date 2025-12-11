@@ -17,7 +17,7 @@ dependencies:
   native_toolchain_cmake:
     git:
       url: https://github.com/jasaw/native_toolchain_cmake
-      ref: 2b441c6f0b35a3d36fa5a2dcb59b0276f8727904 # feat/use_android_ndk_cmake_ninja branch
+      ref: 08d90034187313927624f03a7263c29001c2cd13 # main branch
     # path: ../../../native_toolchain_cmake
   #   path: ../native_toolchain_cmake
   path: ^1.9.1
