@@ -17,7 +17,7 @@ dependencies:
   native_toolchain_cmake:
     git:
       url: https://github.com/jasaw/native_toolchain_cmake
-      ref: 08d90034187313927624f03a7263c29001c2cd13 # main branch
+      ref: 0479f6e69d31e7e12cfd8d7e8cc54d1dbb767b98 # main branch
     # path: ../../../native_toolchain_cmake
   #   path: ../native_toolchain_cmake
   path: ^1.9.1
