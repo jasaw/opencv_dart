@@ -38,6 +38,11 @@ const allowedModules = {
 };
 
 Future<void> runBuild(BuildInput input, BuildOutputBuilder output, {Set<String>? optionalModules}) async {
+  // x64 target is not supported. Assume this is unit test, skip hook build.
+  if (input.config.code.targetOS == OS.windows && input.config.code.targetArchitecture == Architecture.x64) {
+    return;
+  }
+
   final packagePath = Directory(await getPackagePath('dartcv4'));
   final modules = optionalModules ?? {...defaultIncludedModules};
   final userDefines = input.userDefines;
