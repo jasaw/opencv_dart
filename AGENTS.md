@@ -24,7 +24,7 @@ Modules are gated at build time: core is always on, the default is core+imgcodec
   - Prebuilt OpenCV binaries from `rainyl/opencv.full` releases are only recommended for use before `dartcv 2.2.0` (large download); set `DARTCV_CACHE_DIR` to reuse the cache. `DARTCV_DISABLE_DOWNLOAD_OPENCV=1` forces a system `OpenCV_DIR`.
 - **Critical gotcha:** the native-assets build cache is keyed on the *contents of `hook/build.dart` `hook/link.dart` and `pubspec.yaml`*. After changing any C/C++/CMake source, edit `hook/build.dart` (e.g. append a comment) or the hooks will not recompile.
 - Run one test: `dart test test/core/mat_test.dart`.
-- DNN tests read `test/models/*` (gitignored) — download `models.zip` from the GitHub release tag `dnn_test_files` (CI does this). videoio tests need `test/images/small2.avi` / `small2.mp4` (gitignored). Other tests use `test/images/`.
+- DNN tests read `test/models/*` (gitignored) — download `models.zip` from the GitHub release tag `dnn_test_files` (CI does this). videoio writer tests write to per-test temp dirs (so `dart test`'s parallel isolates never race on a shared file); only `test/images/small.mp4` is a committed read-only fixture. Other tests use `test/images/`.
 - Coverage (CI): `dart pub global activate coverage && dart pub global run coverage:test_with_coverage --package . --package-name dartcv4`.
 
 ## Regenerating FFI bindings

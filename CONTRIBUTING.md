@@ -48,7 +48,7 @@ If you want to add a new OpenCV API/module:
 5. Run `dart test` — the hooks configure and build the `dartcv` native library on the fly. To run a single test file: `dart test test/core/mat_test.dart`.
 6. Note:
    - **After changing any C/C++/CMake source, touch `hook/build.dart`** (e.g. append a comment) — the native-assets build cache is keyed on its content, and the hooks will not recompile otherwise.
-   - DNN tests read `test/models/*` (gitignored); download `models.zip` from the GitHub release tag `dnn_test_files` into `test/`. videoio tests need `test/images/small2.avi` / `small2.mp4` (gitignored).
+   - DNN tests read `test/models/*` (gitignored); download `models.zip` from the GitHub release tag `dnn_test_files` into `test/`. videoio writer tests write to per-test temp dirs (so `dart test`'s parallel isolates never race on a shared file); only `test/images/small.mp4` is a committed read-only fixture.
    - Format with `dart format --line-length 110` and check with `dart analyze` before committing.
 
 Other platforms are similar.
