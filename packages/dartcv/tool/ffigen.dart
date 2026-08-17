@@ -55,7 +55,7 @@ ffigen.FfiGenerator _withRecordUse(ffigen.FfiGenerator y, Directory outDir) {
       cppFile: y.output.cppFile,
       symbolFile: y.output.symbolFile,
       recordUseMapping: File(
-        '$outDir/$baseName.record_use_mapping.g.dart',
+        '${outDir.path}/$baseName.record_use_mapping.g.dart',
       ).absolute.uri,
       commentType: y.output.commentType,
       preamble: y.output.preamble,
@@ -109,6 +109,6 @@ Future<void> main(List<String> args) async {
     );
     final gen = _withRecordUse(config.configAdapter(), outDir);
     gen.generate(logger: logger);
-    print('generated $outDir/$name.g.dart');
+    print('generated ${outDir.path}/$name.g.dart');
   }
 }
