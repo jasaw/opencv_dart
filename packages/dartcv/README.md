@@ -178,7 +178,7 @@ hooks:
     - `ximgproc`
     - `xobjdetect`
 - Note: even a module is excluded, it's dart code is still available, but throws a symbol not found exception when called.
-- ~~`videoio` and `highgui` will introduce FFMPEG dynamic libraries (except for ios, ffmpeg is not supported on ios for now).~~ FFMPEG is no longer availabel with `dartcv >= 2.2.0`
+- ~~`videoio` and `highgui` will introduce FFMPEG dynamic libraries (except for ios, ffmpeg is not supported on ios for now).~~ FFMPEG is no longer available with `dartcv >= 2.2.0`
 
 ## TODO
 

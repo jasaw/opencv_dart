@@ -374,15 +374,17 @@ external ffi.Pointer<CvStatus> cv_video_registry_getWriterBackends(
 );
 
 @meta.RecordUse()
-@ffi.Native<ffi.Bool Function(ffi.Int)>()
-external bool cv_video_registry_hasBackend(
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Pointer<ffi.Bool>)>()
+external ffi.Pointer<CvStatus> cv_video_registry_hasBackend(
   int api,
+  ffi.Pointer<ffi.Bool> rval,
 );
 
 @meta.RecordUse()
-@ffi.Native<ffi.Bool Function(ffi.Int)>()
-external bool cv_video_registry_isBackendBuiltIn(
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Pointer<ffi.Bool>)>()
+external ffi.Pointer<CvStatus> cv_video_registry_isBackendBuiltIn(
   int api,
+  ffi.Pointer<ffi.Bool> rval,
 );
 
 const addresses = _SymbolAddresses();

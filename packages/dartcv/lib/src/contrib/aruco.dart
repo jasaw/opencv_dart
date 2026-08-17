@@ -13,8 +13,8 @@ import '../core/mat.dart';
 import '../core/point.dart';
 import '../core/scalar.dart';
 import '../core/vec.dart';
-import '../g/contrib.g.dart' as cvg;
 import '../g/contrib.g.dart' as ccontrib;
+import '../g/contrib.g.dart' as cvg;
 import 'aruco_dict.dart';
 
 class ArucoDetector extends CvStruct<cvg.ArucoDetector> {
