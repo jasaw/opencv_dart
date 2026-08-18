@@ -74,6 +74,11 @@ Future<void> runBuild(BuildInput input, BuildOutputBuilder output, {Set<String>?
 
   // Whether to enable linker dead-code elimination (`DARTCV_TREESHAKE`).
   final treeshake = userDefines["treeshake"] as bool? ?? false;
+  // Whether to build OpenCV from source (`DARTCV_BUILD_OPENCV_FROM_SOURCE`).
+  // Left unset by default so CMakeLists.txt's own default applies; consumers can
+  // set `hooks.user_defines.dartcv4.build_opencv_from_source: false` in their
+  // pubspec.yaml to use the prebuilt static OpenCV binary instead.
+  final buildOpenCVFromSource = userDefines["build_opencv_from_source"] as bool?;
   // Optional keep-list of exported dartcv symbols, normally produced by
   // `hook/link.dart` from the recorded `@ffi.Native` usages (AOT builds).
   // When present, CMake restricts the DLL exports to these symbols and strips
@@ -158,6 +163,8 @@ Future<void> runBuild(BuildInput input, BuildOutputBuilder output, {Set<String>?
       if (targetOS == OS.iOS || targetOS == OS.macOS) 'WITH_OPENCL_SVM': 'OFF',
       // 'FFMPEG_USE_STATIC_LIBS': 'OFF',
       'DARTCV_ENABLE_INSTALL': 'ON',
+      if (buildOpenCVFromSource != null)
+        'DARTCV_BUILD_OPENCV_FROM_SOURCE': buildOpenCVFromSource ? 'ON' : 'OFF',
       'DARTCV_TREESHAKE': treeshake ? 'ON' : 'OFF',
       if (keepFile != null) 'DARTCV_KEEP_FILE': keepFile,
       'CMAKE_INSTALL_PREFIX': input.outputDirectory.resolve('install/').toFilePath(),
