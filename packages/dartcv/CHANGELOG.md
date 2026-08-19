@@ -1,5 +1,9 @@
 # dartcv
 
+## 2.3.1
+
+- new: add `skip_build` hook user-define to bypass the native build entirely, for CI unit-test runs that never call into dartcv4's native code
+
 ## 2.3.0
 
 - new: memory-safety fixes:
