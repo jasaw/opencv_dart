@@ -44,6 +44,13 @@ const allowedModules = {
 };
 
 Future<void> runBuild(BuildInput input, BuildOutputBuilder output, {Set<String>? optionalModules}) async {
+  // Consumers can set `hooks.user_defines.dartcv4.skip_build: true` in their pubspec.yaml
+  // to skip the native build entirely (e.g. for unit test runs that never call into
+  // dartcv4's native code, where compiling/downloading OpenCV is pure CI overhead).
+  if (input.userDefines['skip_build'] == true) {
+    return;
+  }
+
   // Check if code assets are expected (not for web builds).
   // Web builds use WASM/JS interop, not native code assets.
   if (!input.config.buildCodeAssets) {
