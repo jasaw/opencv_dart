@@ -149,7 +149,51 @@ hooks:
         use_opencl: false
       linux:
         use_opencl: true
+      # which OpenCV to build against, see below
+      # opencv_version: "4.12.0"
+      # opencv_dir: /path/to/opencv/lib/cmake/opencv4
 ```
+
+### Choosing which OpenCV to build against
+
+By default dartcv builds the OpenCV version this package pins, which is the one
+its bindings are developed and tested against. Two options change that, for
+projects that need a specific OpenCV — usually because their results have to
+match another environment, such as a Python service processing the same images.
+
+> [!WARNING]
+> The pinned version is the only one dartcv is developed and tested against.
+> OpenCV changes its API between releases, so a different version may fail to
+> compile, fail to link, or build cleanly and then behave differently at
+> runtime. **Problems that come from a non-default OpenCV are not supported by
+> opencv_dart**: before reporting one, reproduce it with the pinned version,
+> and if it only happens with yours, it is yours to carry.
+>
+> Use these options when you have a reason to accept that — matching another
+> environment's results, or a platform SDK you do not control — and pin the
+> version you tested, rather than tracking whatever is newest.
+
+- `opencv_version`: build this upstream tag from source instead of the pinned
+  one, for example `"4.12.0"`. Must be 4.12 or newer; dartcv calls APIs that do
+  not exist before then, and the build stops with a message saying so.
+- `opencv_dir`: use an OpenCV that is already built, given as the directory
+  holding `OpenCVConfig.cmake`. Takes precedence over `opencv_version`, and can
+  also be set per platform, since a cross-compiled OpenCV lives somewhere
+  different for each target:
+
+```yaml
+hooks:
+  user_defines:
+    dartcv4:
+      include_modules:
+        - ximgproc
+      android:
+        opencv_dir: /path/to/OpenCV-android-sdk/sdk/native/jni
+      ios:
+        opencv_dir: /path/to/opencv-ios/device-arm64/lib/cmake/opencv4
+```
+
+Neither option changes anything for projects that do not set them.
 
 - `debug`: enable debug mode, default is `false`, if enabled, all messages will be printed to stderr.
 - `treeshake`: enable linker dead-code elimination, default is `false`. When enabled, the native library is compiled with function-level sections and the linker garbage-collects code that is not reachable from the exported symbols.
