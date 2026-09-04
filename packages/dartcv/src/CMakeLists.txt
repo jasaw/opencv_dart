@@ -78,6 +78,10 @@ if(NOT DARTCV_OPENCV_VERSION)
   set(DARTCV_OPENCV_VERSION "4.12.0.0")
 endif()
 
+# Oldest OpenCV whose headers provide every API dartcv calls. Verified by
+# building dartcv against 4.8.1, 4.10.0, 4.11.0 and 4.12.0.
+set(DARTCV_MIN_OPENCV_VERSION "4.12")
+
 message(STATUS "dartcv Version: ${PROJECT_VERSION}")
 message(STATUS "OpenCV Version: ${OPENCV_VERSION}")
 message(STATUS "OpenCV Prebuilt Version: ${DARTCV_OPENCV_VERSION}")
@@ -111,6 +115,15 @@ include(FetchContent)
 
 # Build from source
 if(DARTCV_BUILD_OPENCV_FROM_SOURCE)
+  # Same floor as the pre-built and bring-your-own paths: building an older
+  # OpenCV from source succeeds and then fails to compile dartcv against it.
+  if(OPENCV_VERSION VERSION_LESS DARTCV_MIN_OPENCV_VERSION)
+    message(FATAL_ERROR
+      "dartcv requires OpenCV ${DARTCV_MIN_OPENCV_VERSION} or newer, "
+      "but was asked to build ${OPENCV_VERSION} from source."
+    )
+  endif()
+
   include(cmake/opencv_options.cmake)
 
   if(DARTCV_WITH_ARUCO
