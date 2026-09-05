@@ -4,5 +4,6 @@
 
 library dartcv.stitching;
 
+export 'src/stitching/pipeline.dart';
 export 'src/stitching/stitching.dart';
 export 'src/stitching/stitching_async.dart';

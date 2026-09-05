@@ -2,6 +2,14 @@
 
 ## 2.3.1
 
+- new(stitching): bind the warper and rotation-estimation gaps that kept the module partial, so the detailed pipeline can be driven from Dart:
+  - `WarperCreator` / `WarperType` covering all 12 `cv::WarperCreator` projections (plane, affine, cylindrical, spherical, fisheye, stereographic, compressed-rectilinear, panini and their portrait variants, mercator, transverse mercator), plus `Stitcher.warper` to override the mode's default projection — cylindrical is the one that suits labels on curved surfaces
+  - `RotationWarper` (`cv::detail::RotationWarper`) with `warp`, `warpBackward`, `buildMaps`, `warpRoi`, `warpPoint`, `warpPointBackward` and `scale`, for projecting a single image outside `Stitcher`
+  - free `waveCorrect` / `autoDetectWaveCorrectKind` (`cv::detail::`), and the previously missing `WaveCorrectKind.AUTO`
+  - `Stitcher.cameras`, `Stitcher.setTransform`, `Stitcher.workScale` and `Stitcher.resultMask`, so estimated camera parameters can be read, edited and pushed back between `estimateTransform` and `composePanorama`
+  - async variants for all of the above
+- new(stitching): bind the remaining pipeline stages, completing the module — `Stitcher.featuresFinder` (`FeaturesFinder`, ORB/SIFT/AKAZE/BRISK), `featuresMatcher` (`FeaturesMatcher`, incl. `BestOf2NearestRangeMatcher` for ordered captures), `matchingMask`, `estimator` (`Estimator`), `bundleAdjuster` (`BundleAdjuster` + `confThresh`/`refinementMask`/`termCriteria`), `exposureCompensator` (`ExposureCompensator` + the block-based settings), `seamFinder` (`SeamFinder`) and `blender` (`Blender` + `sharpness`/`numBands`)
+- new(stitching): `sequentialMatchingMask()` builds the band-diagonal matching mask an ordered capture (turntable, video walk-through) wants, optionally wrapping around the end of a full revolution
 - fix: OpenCV module dependencies are now resolved through a transitive CMake closure, so indirectly enabled modules (e.g. `objdetect`, `ximgproc`) correctly pull in required dependencies (`calib3d` -> `features2d`/`flann`) regardless of option order.
 - new: Dart build/link hooks validate `include_modules`/`exclude_modules` conflicts and report all conflicting dependencies at once.
 

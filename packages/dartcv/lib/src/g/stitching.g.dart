@@ -18,6 +18,439 @@ import 'package:meta/meta.dart' as meta;
 import '' as self;
 
 @meta.RecordUse()
+@ffi.Native<ffi.Void Function(BlenderPtr)>()
+external void cv_Blender_close(
+  BlenderPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Bool, ffi.Pointer<Blender>)>()
+external ffi.Pointer<CvStatus> cv_Blender_create(
+  int type,
+  bool try_gpu,
+  ffi.Pointer<Blender> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Blender, ffi.Pointer<ffi.Int>)>()
+external ffi.Pointer<CvStatus> cv_Blender_get_numBands(
+  Blender self$1,
+  ffi.Pointer<ffi.Int> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Blender, ffi.Pointer<ffi.Float>)>()
+external ffi.Pointer<CvStatus> cv_Blender_get_sharpness(
+  Blender self$1,
+  ffi.Pointer<ffi.Float> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Blender, ffi.Int)>()
+external ffi.Pointer<CvStatus> cv_Blender_set_numBands(
+  Blender self$1,
+  int val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Blender, ffi.Float)>()
+external ffi.Pointer<CvStatus> cv_Blender_set_sharpness(
+  Blender self$1,
+  double val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(BundleAdjusterPtr)>()
+external void cv_BundleAdjuster_close(
+  BundleAdjusterPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Pointer<BundleAdjuster>)>()
+external ffi.Pointer<CvStatus> cv_BundleAdjuster_create(
+  int type,
+  ffi.Pointer<BundleAdjuster> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Double Function(BundleAdjuster)>()
+external double cv_BundleAdjuster_get_confThresh(
+  BundleAdjuster self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(BundleAdjuster, Mat, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_BundleAdjuster_get_refinementMask(
+  BundleAdjuster self$1,
+  Mat rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<TermCriteria Function(BundleAdjuster)>()
+external TermCriteria cv_BundleAdjuster_get_termCriteria(
+  BundleAdjuster self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(BundleAdjuster, ffi.Double)>()
+external void cv_BundleAdjuster_set_confThresh(
+  BundleAdjuster self$1,
+  double val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(BundleAdjuster, Mat)>()
+external ffi.Pointer<CvStatus> cv_BundleAdjuster_set_refinementMask(
+  BundleAdjuster self$1,
+  Mat mask,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(BundleAdjuster, TermCriteria)>()
+external void cv_BundleAdjuster_set_termCriteria(
+  BundleAdjuster self$1,
+  TermCriteria val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(EstimatorPtr)>()
+external void cv_Estimator_close(
+  EstimatorPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Bool, ffi.Pointer<Estimator>)>()
+external ffi.Pointer<CvStatus> cv_Estimator_create(
+  int type,
+  bool is_focals_estimated,
+  ffi.Pointer<Estimator> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(ExposureCompensatorPtr)>()
+external void cv_ExposureCompensator_close(
+  ExposureCompensatorPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Pointer<ExposureCompensator>)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_create(
+  int type,
+  ffi.Pointer<ExposureCompensator> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Pointer<CvSize>)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_get_blockSize(
+  ExposureCompensator self$1,
+  ffi.Pointer<CvSize> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Pointer<ffi.Int>)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_get_nrFeeds(
+  ExposureCompensator self$1,
+  ffi.Pointer<ffi.Int> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Pointer<ffi.Int>)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_get_nrGainsFilteringIterations(
+  ExposureCompensator self$1,
+  ffi.Pointer<ffi.Int> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Pointer<ffi.Double>)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_get_similarityThreshold(
+  ExposureCompensator self$1,
+  ffi.Pointer<ffi.Double> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Bool Function(ExposureCompensator)>()
+external bool cv_ExposureCompensator_get_updateGain(
+  ExposureCompensator self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, CvSize)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_set_blockSize(
+  ExposureCompensator self$1,
+  CvSize val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Int)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_set_nrFeeds(
+  ExposureCompensator self$1,
+  int val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Int)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_set_nrGainsFilteringIterations(
+  ExposureCompensator self$1,
+  int val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ExposureCompensator, ffi.Double)>()
+external ffi.Pointer<CvStatus> cv_ExposureCompensator_set_similarityThreshold(
+  ExposureCompensator self$1,
+  double val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(ExposureCompensator, ffi.Bool)>()
+external void cv_ExposureCompensator_set_updateGain(
+  ExposureCompensator self$1,
+  bool val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(FeaturesFinderPtr)>()
+external void cv_FeaturesFinder_close(
+  FeaturesFinderPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Int, ffi.Pointer<FeaturesFinder>)>()
+external ffi.Pointer<CvStatus> cv_FeaturesFinder_create(
+  int type,
+  int nfeatures,
+  ffi.Pointer<FeaturesFinder> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(FeaturesMatcherPtr)>()
+external void cv_FeaturesMatcher_close(
+  FeaturesMatcherPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(FeaturesMatcher)>()
+external ffi.Pointer<CvStatus> cv_FeaturesMatcher_collectGarbage(
+  FeaturesMatcher self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    ffi.Int,
+    ffi.Int,
+    ffi.Bool,
+    ffi.Bool,
+    ffi.Float,
+    ffi.Int,
+    ffi.Int,
+    ffi.Double,
+    ffi.Pointer<FeaturesMatcher>,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_FeaturesMatcher_create(
+  int type,
+  int range_width,
+  bool full_affine,
+  bool try_use_gpu,
+  double match_conf,
+  int num_matches_thresh1,
+  int num_matches_thresh2,
+  double matches_confidence_thresh,
+  ffi.Pointer<FeaturesMatcher> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Bool Function(FeaturesMatcher)>()
+external bool cv_FeaturesMatcher_isThreadSafe(
+  FeaturesMatcher self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    RotationWarper,
+    CvSize,
+    Mat,
+    Mat,
+    Mat,
+    Mat,
+    ffi.Pointer<CvRect>,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_buildMaps(
+  RotationWarper self$1,
+  CvSize src_size,
+  Mat K,
+  Mat R,
+  Mat xmap,
+  Mat ymap,
+  ffi.Pointer<CvRect> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(RotationWarperPtr)>()
+external void cv_RotationWarper_close(
+  RotationWarperPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Pointer<RotationWarper>)
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_create(
+  int type,
+  double a,
+  double b,
+  double scale,
+  ffi.Pointer<RotationWarper> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Float Function(RotationWarper)>()
+external double cv_RotationWarper_get_scale(
+  RotationWarper self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(RotationWarper, ffi.Float)>()
+external void cv_RotationWarper_set_scale(
+  RotationWarper self$1,
+  double val,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    RotationWarper,
+    Mat,
+    Mat,
+    Mat,
+    ffi.Int,
+    ffi.Int,
+    Mat,
+    ffi.Pointer<CvPoint>,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_warp(
+  RotationWarper self$1,
+  Mat src,
+  Mat K,
+  Mat R,
+  int interp_mode,
+  int border_mode,
+  Mat dst,
+  ffi.Pointer<CvPoint> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    RotationWarper,
+    Mat,
+    Mat,
+    Mat,
+    ffi.Int,
+    ffi.Int,
+    CvSize,
+    Mat,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_warpBackward(
+  RotationWarper self$1,
+  Mat src,
+  Mat K,
+  Mat R,
+  int interp_mode,
+  int border_mode,
+  CvSize dst_size,
+  Mat dst,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    RotationWarper,
+    CvPoint2f,
+    Mat,
+    Mat,
+    ffi.Pointer<CvPoint2f>,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_warpPoint(
+  RotationWarper self$1,
+  CvPoint2f pt,
+  Mat K,
+  Mat R,
+  ffi.Pointer<CvPoint2f> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    RotationWarper,
+    CvPoint2f,
+    Mat,
+    Mat,
+    ffi.Pointer<CvPoint2f>,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_warpPointBackward(
+  RotationWarper self$1,
+  CvPoint2f pt,
+  Mat K,
+  Mat R,
+  ffi.Pointer<CvPoint2f> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(RotationWarper, CvSize, Mat, Mat, ffi.Pointer<CvRect>, imp$1.CvCallback_0)
+>()
+external ffi.Pointer<CvStatus> cv_RotationWarper_warpRoi(
+  RotationWarper self$1,
+  CvSize src_size,
+  Mat K,
+  Mat R,
+  ffi.Pointer<CvRect> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(SeamFinderPtr)>()
+external void cv_SeamFinder_close(
+  SeamFinderPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Float, ffi.Float, ffi.Pointer<SeamFinder>)>()
+external ffi.Pointer<CvStatus> cv_SeamFinder_create(
+  int type,
+  double terminal_cost,
+  double bad_region_penalty,
+  ffi.Pointer<SeamFinder> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<VecCameraParams>, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_cameras(
+  Stitcher self$1,
+  ffi.Pointer<VecCameraParams> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Void Function(StitcherPtr)>()
 external void cv_Stitcher_close(
   StitcherPtr stitcher,
@@ -70,15 +503,65 @@ external ffi.Pointer<CvStatus> cv_Stitcher_estimateTransform(
 );
 
 @meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<Blender>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_blender(
+  Stitcher self$1,
+  ffi.Pointer<Blender> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<BundleAdjuster>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_bundleAdjuster(
+  Stitcher self$1,
+  ffi.Pointer<BundleAdjuster> rval,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Double Function(Stitcher)>()
 external double cv_Stitcher_get_compositingResol(
   Stitcher self$1,
 );
 
 @meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<Estimator>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_estimator(
+  Stitcher self$1,
+  ffi.Pointer<Estimator> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<ExposureCompensator>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_exposureCompensator(
+  Stitcher self$1,
+  ffi.Pointer<ExposureCompensator> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<FeaturesFinder>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_featuresFinder(
+  Stitcher self$1,
+  ffi.Pointer<FeaturesFinder> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<FeaturesMatcher>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_featuresMatcher(
+  Stitcher self$1,
+  ffi.Pointer<FeaturesMatcher> rval,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Int Function(Stitcher)>()
 external int cv_Stitcher_get_interpolationFlags(
   Stitcher self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, Mat, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_matchingMask(
+  Stitcher self$1,
+  Mat rval,
+  imp$1.CvCallback_0 callback,
 );
 
 @meta.RecordUse()
@@ -100,6 +583,20 @@ external double cv_Stitcher_get_seamEstimationResol(
 );
 
 @meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<SeamFinder>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_seamFinder(
+  Stitcher self$1,
+  ffi.Pointer<SeamFinder> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ffi.Pointer<WarperCreator>)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_get_warper(
+  Stitcher self$1,
+  ffi.Pointer<WarperCreator> rval,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Int Function(Stitcher)>()
 external int cv_Stitcher_get_waveCorrectKind(
   Stitcher self$1,
@@ -112,6 +609,54 @@ external bool cv_Stitcher_get_waveCorrection(
 );
 
 @meta.RecordUse()
+@ffi.Native<ffi.Double Function(Stitcher)>()
+external double cv_Stitcher_get_workScale(
+  Stitcher self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, Mat, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_resultMask(
+  Stitcher self$1,
+  Mat rmask,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    Stitcher,
+    VecMat,
+    VecCameraParams,
+    VecI32,
+    ffi.Pointer<ffi.Int>,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_Stitcher_setTransform(
+  Stitcher self$1,
+  VecMat mats,
+  VecCameraParams cameras,
+  VecI32 component,
+  ffi.Pointer<ffi.Int> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, Blender)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_blender(
+  Stitcher self$1,
+  Blender blender,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, BundleAdjuster)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_bundleAdjuster(
+  Stitcher self$1,
+  BundleAdjuster adjuster,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Void Function(Stitcher, ffi.Double)>()
 external void cv_Stitcher_set_compositingResol(
   Stitcher self$1,
@@ -119,10 +664,45 @@ external void cv_Stitcher_set_compositingResol(
 );
 
 @meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, Estimator)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_estimator(
+  Stitcher self$1,
+  Estimator estimator,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, ExposureCompensator)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_exposureCompensator(
+  Stitcher self$1,
+  ExposureCompensator compensator,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, FeaturesFinder)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_featuresFinder(
+  Stitcher self$1,
+  FeaturesFinder finder,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, FeaturesMatcher)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_featuresMatcher(
+  Stitcher self$1,
+  FeaturesMatcher matcher,
+);
+
+@meta.RecordUse()
 @ffi.Native<ffi.Void Function(Stitcher, ffi.Int)>()
 external void cv_Stitcher_set_interpolationFlags(
   Stitcher self$1,
   int val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, Mat)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_matchingMask(
+  Stitcher self$1,
+  Mat mask,
 );
 
 @meta.RecordUse()
@@ -144,6 +724,20 @@ external void cv_Stitcher_set_registrationResol(
 external void cv_Stitcher_set_seamEstimationResol(
   Stitcher self$1,
   double val,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, SeamFinder)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_seamFinder(
+  Stitcher self$1,
+  SeamFinder finder,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(Stitcher, WarperCreator)>()
+external ffi.Pointer<CvStatus> cv_Stitcher_set_warper(
+  Stitcher self$1,
+  WarperCreator warper,
 );
 
 @meta.RecordUse()
@@ -183,16 +777,241 @@ external ffi.Pointer<CvStatus> cv_Stitcher_stitch_1(
   imp$1.CvCallback_0 callback,
 );
 
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(VecCameraParamsPtr)>()
+external void cv_VecCameraParams_close(
+  VecCameraParamsPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    VecCameraParams,
+    ffi.Int,
+    ffi.Pointer<ffi.Double>,
+    ffi.Pointer<ffi.Double>,
+    ffi.Pointer<ffi.Double>,
+    ffi.Pointer<ffi.Double>,
+    Mat,
+    Mat,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_VecCameraParams_get(
+  VecCameraParams self$1,
+  int index,
+  ffi.Pointer<ffi.Double> focal,
+  ffi.Pointer<ffi.Double> aspect,
+  ffi.Pointer<ffi.Double> ppx,
+  ffi.Pointer<ffi.Double> ppy,
+  Mat R,
+  Mat t,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Size Function(VecCameraParams)>()
+external int cv_VecCameraParams_length(
+  VecCameraParams self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<VecCameraParams> Function(ffi.Size)>()
+external ffi.Pointer<VecCameraParams> cv_VecCameraParams_new(
+  int length,
+);
+
+@meta.RecordUse()
+@ffi.Native<
+  ffi.Pointer<CvStatus> Function(
+    VecCameraParams,
+    ffi.Int,
+    ffi.Double,
+    ffi.Double,
+    ffi.Double,
+    ffi.Double,
+    Mat,
+    Mat,
+    imp$1.CvCallback_0,
+  )
+>()
+external ffi.Pointer<CvStatus> cv_VecCameraParams_set(
+  VecCameraParams self$1,
+  int index,
+  double focal,
+  double aspect,
+  double ppx,
+  double ppy,
+  Mat R,
+  Mat t,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Void Function(WarperCreatorPtr)>()
+external void cv_WarperCreator_close(
+  WarperCreatorPtr self$1,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(ffi.Int, ffi.Float, ffi.Float, ffi.Pointer<WarperCreator>)>()
+external ffi.Pointer<CvStatus> cv_WarperCreator_create(
+  int type,
+  double a,
+  double b,
+  ffi.Pointer<WarperCreator> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(WarperCreator, ffi.Float, ffi.Pointer<RotationWarper>)>()
+external ffi.Pointer<CvStatus> cv_WarperCreator_createWarper(
+  WarperCreator self$1,
+  double scale,
+  ffi.Pointer<RotationWarper> rval,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(VecMat, ffi.Pointer<ffi.Int>, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_detail_autoDetectWaveCorrectKind(
+  VecMat rmats,
+  ffi.Pointer<ffi.Int> rval,
+  imp$1.CvCallback_0 callback,
+);
+
+@meta.RecordUse()
+@ffi.Native<ffi.Pointer<CvStatus> Function(VecMat, ffi.Int, imp$1.CvCallback_0)>()
+external ffi.Pointer<CvStatus> cv_detail_waveCorrect(
+  VecMat rmats,
+  int kind,
+  imp$1.CvCallback_0 callback,
+);
+
 const addresses = _SymbolAddresses();
 
 class _SymbolAddresses {
   const _SymbolAddresses();
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(BlenderPtr)>> get cv_Blender_close =>
+      ffi.Native.addressOf(self.cv_Blender_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(BundleAdjusterPtr)>> get cv_BundleAdjuster_close =>
+      ffi.Native.addressOf(self.cv_BundleAdjuster_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(EstimatorPtr)>> get cv_Estimator_close =>
+      ffi.Native.addressOf(self.cv_Estimator_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(ExposureCompensatorPtr)>>
+  get cv_ExposureCompensator_close => ffi.Native.addressOf(self.cv_ExposureCompensator_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(FeaturesFinderPtr)>> get cv_FeaturesFinder_close =>
+      ffi.Native.addressOf(self.cv_FeaturesFinder_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(FeaturesMatcherPtr)>> get cv_FeaturesMatcher_close =>
+      ffi.Native.addressOf(self.cv_FeaturesMatcher_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(RotationWarperPtr)>> get cv_RotationWarper_close =>
+      ffi.Native.addressOf(self.cv_RotationWarper_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(SeamFinderPtr)>> get cv_SeamFinder_close =>
+      ffi.Native.addressOf(self.cv_SeamFinder_close);
   ffi.Pointer<ffi.NativeFunction<ffi.Void Function(StitcherPtr)>> get cv_Stitcher_close =>
       ffi.Native.addressOf(self.cv_Stitcher_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(VecCameraParamsPtr)>> get cv_VecCameraParams_close =>
+      ffi.Native.addressOf(self.cv_VecCameraParams_close);
+  ffi.Pointer<ffi.NativeFunction<ffi.Void Function(WarperCreatorPtr)>> get cv_WarperCreator_close =>
+      ffi.Native.addressOf(self.cv_WarperCreator_close);
 }
 
+final class Blender extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<Blender> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<Blender>()..ref.ptr = ptr;
+}
+
+typedef BlenderPtr = ffi.Pointer<Blender>;
+
+final class BundleAdjuster extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<BundleAdjuster> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<BundleAdjuster>()..ref.ptr = ptr;
+}
+
+typedef BundleAdjusterPtr = ffi.Pointer<BundleAdjuster>;
+typedef CvPoint = imp$1.CvPoint;
+typedef CvPoint2f = imp$1.CvPoint2f;
+typedef CvRect = imp$1.CvRect;
+typedef CvSize = imp$1.CvSize;
 typedef CvStatus = imp$1.CvStatus;
+
+final class Estimator extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<Estimator> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<Estimator>()..ref.ptr = ptr;
+}
+
+typedef EstimatorPtr = ffi.Pointer<Estimator>;
+
+final class ExposureCompensator extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<ExposureCompensator> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<ExposureCompensator>()..ref.ptr = ptr;
+}
+
+typedef ExposureCompensatorPtr = ffi.Pointer<ExposureCompensator>;
+
+final class FeaturesFinder extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<FeaturesFinder> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<FeaturesFinder>()..ref.ptr = ptr;
+}
+
+typedef FeaturesFinderPtr = ffi.Pointer<FeaturesFinder>;
+
+final class FeaturesMatcher extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<FeaturesMatcher> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<FeaturesMatcher>()..ref.ptr = ptr;
+}
+
+typedef FeaturesMatcherPtr = ffi.Pointer<FeaturesMatcher>;
 typedef Mat = imp$1.Mat;
+
+final class RotationWarper extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<RotationWarper> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<RotationWarper>()..ref.ptr = ptr;
+}
+
+typedef RotationWarperPtr = ffi.Pointer<RotationWarper>;
+
+const int STITCHING_BLENDER_FEATHER = 1;
+
+const int STITCHING_BLENDER_MULTI_BAND = 2;
+
+const int STITCHING_BLENDER_NO = 0;
+
+const int STITCHING_BUNDLE_ADJUSTER_AFFINE = 3;
+
+const int STITCHING_BUNDLE_ADJUSTER_AFFINE_PARTIAL = 4;
+
+const int STITCHING_BUNDLE_ADJUSTER_NO = 0;
+
+const int STITCHING_BUNDLE_ADJUSTER_RAY = 2;
+
+const int STITCHING_BUNDLE_ADJUSTER_REPROJ = 1;
 
 const int STITCHING_ERR_CAMERA_PARAMS_ADJUST_FAIL = 3;
 
@@ -200,11 +1019,92 @@ const int STITCHING_ERR_HOMOGRAPHY_EST_FAIL = 2;
 
 const int STITCHING_ERR_NEED_MORE_IMGS = 1;
 
+const int STITCHING_ESTIMATOR_AFFINE = 1;
+
+const int STITCHING_ESTIMATOR_HOMOGRAPHY = 0;
+
+const int STITCHING_EXPOSURE_CHANNELS = 3;
+
+const int STITCHING_EXPOSURE_CHANNELS_BLOCKS = 4;
+
+const int STITCHING_EXPOSURE_GAIN = 1;
+
+const int STITCHING_EXPOSURE_GAIN_BLOCKS = 2;
+
+const int STITCHING_EXPOSURE_NO = 0;
+
+const int STITCHING_FINDER_AKAZE = 2;
+
+const int STITCHING_FINDER_BRISK = 3;
+
+const int STITCHING_FINDER_ORB = 0;
+
+const int STITCHING_FINDER_SIFT = 1;
+
+const int STITCHING_MATCHER_AFFINE_BEST_OF_2_NEAREST = 2;
+
+const int STITCHING_MATCHER_BEST_OF_2_NEAREST = 0;
+
+const int STITCHING_MATCHER_BEST_OF_2_NEAREST_RANGE = 1;
+
 const int STITCHING_OK = 0;
 
 const int STITCHING_PANORAMA = 0;
 
 const int STITCHING_SCANS = 1;
+
+const int STITCHING_SEAM_DP_COLOR = 2;
+
+const int STITCHING_SEAM_DP_COLOR_GRAD = 3;
+
+const int STITCHING_SEAM_GRAPH_CUT_COLOR = 4;
+
+const int STITCHING_SEAM_GRAPH_CUT_COLOR_GRAD = 5;
+
+const int STITCHING_SEAM_NO = 0;
+
+const int STITCHING_SEAM_VORONOI = 1;
+
+const int STITCHING_WARPER_AFFINE = 1;
+
+const int STITCHING_WARPER_COMPRESSED_RECTILINEAR = 6;
+
+const int STITCHING_WARPER_COMPRESSED_RECTILINEAR_PORTRAIT = 7;
+
+const int STITCHING_WARPER_CYLINDRICAL = 2;
+
+const int STITCHING_WARPER_FISHEYE = 4;
+
+const int STITCHING_WARPER_MERCATOR = 10;
+
+const int STITCHING_WARPER_PANINI = 8;
+
+const int STITCHING_WARPER_PANINI_PORTRAIT = 9;
+
+const int STITCHING_WARPER_PLANE = 0;
+
+const int STITCHING_WARPER_SPHERICAL = 3;
+
+const int STITCHING_WARPER_STEREOGRAPHIC = 5;
+
+const int STITCHING_WARPER_TRANSVERSE_MERCATOR = 11;
+
+const int STITCHING_WAVE_CORRECT_AUTO = 2;
+
+const int STITCHING_WAVE_CORRECT_HORIZ = 0;
+
+const int STITCHING_WAVE_CORRECT_VERT = 1;
+
+final class SeamFinder extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<SeamFinder> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<SeamFinder>()..ref.ptr = ptr;
+}
+
+typedef SeamFinderPtr = ffi.Pointer<SeamFinder>;
 
 final class Stitcher extends ffi.Struct {
   external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
@@ -216,5 +1116,28 @@ final class Stitcher extends ffi.Struct {
 }
 
 typedef StitcherPtr = ffi.Pointer<Stitcher>;
+typedef TermCriteria = imp$1.TermCriteria;
+
+final class VecCameraParams extends ffi.Struct {
+  external ffi.Pointer<ffi.Void> ptr;
+
+  static ffi.Pointer<VecCameraParams> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Void> ptr,
+  }) => $allocator<VecCameraParams>()..ref.ptr = ptr;
+}
+
+typedef VecCameraParamsPtr = ffi.Pointer<VecCameraParams>;
 typedef VecI32 = imp$1.VecI32;
 typedef VecMat = imp$1.VecMat;
+
+final class WarperCreator extends ffi.Struct {
+  external ffi.Pointer<ffi.Pointer<ffi.Void>> ptr;
+
+  static ffi.Pointer<WarperCreator> $allocate(
+    ffi.Allocator $allocator, {
+    required ffi.Pointer<ffi.Pointer<ffi.Void>> ptr,
+  }) => $allocator<WarperCreator>()..ref.ptr = ptr;
+}
+
+typedef WarperCreatorPtr = ffi.Pointer<WarperCreator>;

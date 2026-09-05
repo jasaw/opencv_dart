@@ -4,6 +4,8 @@
 // NOTE: the dart native-assets build cache is keyed on the CONTENT of this
 // file. After changing any native source (C/C++/CMake), modify this file (e.g.
 // append a comment line) to force the hooks to recompile.
+//
+// cache-bust: stitching warper / waveCorrect / camera-params / pipeline-component bindings (+matches confidence thresh)
 
 import 'package:dartcv4/src/hook_helpers/run_build.dart';
 import 'package:hooks/hooks.dart';

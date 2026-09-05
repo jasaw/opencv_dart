@@ -70,7 +70,7 @@ OpenCV Bindings for Dart Language. Support both asynchronous and synchronous!
 | ml         | :x:                     | :x:                     | ML module               |
 | objdetect  | :white_check_mark:      | :white_check_mark:      | Object Detection module |
 | photo      | :white_check_mark:      | :white_check_mark:      | Photo module            |
-| stitching  | :ballot_box_with_check: | :ballot_box_with_check: | Stitching module        |
+| stitching  | :white_check_mark:      | :white_check_mark:      | Stitching module        |
 | svd        | :white_check_mark:      | :white_check_mark:      | SVD module              |
 | video      | :white_check_mark:      | :white_check_mark:      | Video module            |
 | videoio    | :white_check_mark:      | :white_check_mark:      | VideoIO module          |

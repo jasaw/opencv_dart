@@ -4,6 +4,50 @@ files:
     used-config:
       ffi-native: true
     symbols:
+      c:@Ea@STITCHING_BLENDER_NO@STITCHING_BLENDER_FEATHER:
+        name: STITCHING_BLENDER_FEATHER
+      c:@Ea@STITCHING_BLENDER_NO@STITCHING_BLENDER_MULTI_BAND:
+        name: STITCHING_BLENDER_MULTI_BAND
+      c:@Ea@STITCHING_BLENDER_NO@STITCHING_BLENDER_NO:
+        name: STITCHING_BLENDER_NO
+      c:@Ea@STITCHING_BUNDLE_ADJUSTER_NO@STITCHING_BUNDLE_ADJUSTER_AFFINE:
+        name: STITCHING_BUNDLE_ADJUSTER_AFFINE
+      c:@Ea@STITCHING_BUNDLE_ADJUSTER_NO@STITCHING_BUNDLE_ADJUSTER_AFFINE_PARTIAL:
+        name: STITCHING_BUNDLE_ADJUSTER_AFFINE_PARTIAL
+      c:@Ea@STITCHING_BUNDLE_ADJUSTER_NO@STITCHING_BUNDLE_ADJUSTER_NO:
+        name: STITCHING_BUNDLE_ADJUSTER_NO
+      c:@Ea@STITCHING_BUNDLE_ADJUSTER_NO@STITCHING_BUNDLE_ADJUSTER_RAY:
+        name: STITCHING_BUNDLE_ADJUSTER_RAY
+      c:@Ea@STITCHING_BUNDLE_ADJUSTER_NO@STITCHING_BUNDLE_ADJUSTER_REPROJ:
+        name: STITCHING_BUNDLE_ADJUSTER_REPROJ
+      c:@Ea@STITCHING_ESTIMATOR_HOMOGRAPHY@STITCHING_ESTIMATOR_AFFINE:
+        name: STITCHING_ESTIMATOR_AFFINE
+      c:@Ea@STITCHING_ESTIMATOR_HOMOGRAPHY@STITCHING_ESTIMATOR_HOMOGRAPHY:
+        name: STITCHING_ESTIMATOR_HOMOGRAPHY
+      c:@Ea@STITCHING_EXPOSURE_NO@STITCHING_EXPOSURE_CHANNELS:
+        name: STITCHING_EXPOSURE_CHANNELS
+      c:@Ea@STITCHING_EXPOSURE_NO@STITCHING_EXPOSURE_CHANNELS_BLOCKS:
+        name: STITCHING_EXPOSURE_CHANNELS_BLOCKS
+      c:@Ea@STITCHING_EXPOSURE_NO@STITCHING_EXPOSURE_GAIN:
+        name: STITCHING_EXPOSURE_GAIN
+      c:@Ea@STITCHING_EXPOSURE_NO@STITCHING_EXPOSURE_GAIN_BLOCKS:
+        name: STITCHING_EXPOSURE_GAIN_BLOCKS
+      c:@Ea@STITCHING_EXPOSURE_NO@STITCHING_EXPOSURE_NO:
+        name: STITCHING_EXPOSURE_NO
+      c:@Ea@STITCHING_FINDER_ORB@STITCHING_FINDER_AKAZE:
+        name: STITCHING_FINDER_AKAZE
+      c:@Ea@STITCHING_FINDER_ORB@STITCHING_FINDER_BRISK:
+        name: STITCHING_FINDER_BRISK
+      c:@Ea@STITCHING_FINDER_ORB@STITCHING_FINDER_ORB:
+        name: STITCHING_FINDER_ORB
+      c:@Ea@STITCHING_FINDER_ORB@STITCHING_FINDER_SIFT:
+        name: STITCHING_FINDER_SIFT
+      c:@Ea@STITCHING_MATCHER_BEST_OF_2_NEAREST@STITCHING_MATCHER_AFFINE_BEST_OF_2_NEAREST:
+        name: STITCHING_MATCHER_AFFINE_BEST_OF_2_NEAREST
+      c:@Ea@STITCHING_MATCHER_BEST_OF_2_NEAREST@STITCHING_MATCHER_BEST_OF_2_NEAREST:
+        name: STITCHING_MATCHER_BEST_OF_2_NEAREST
+      c:@Ea@STITCHING_MATCHER_BEST_OF_2_NEAREST@STITCHING_MATCHER_BEST_OF_2_NEAREST_RANGE:
+        name: STITCHING_MATCHER_BEST_OF_2_NEAREST_RANGE
       c:@Ea@STITCHING_OK@STITCHING_ERR_CAMERA_PARAMS_ADJUST_FAIL:
         name: STITCHING_ERR_CAMERA_PARAMS_ADJUST_FAIL
       c:@Ea@STITCHING_OK@STITCHING_ERR_HOMOGRAPHY_EST_FAIL:
@@ -16,6 +60,142 @@ files:
         name: STITCHING_PANORAMA
       c:@Ea@STITCHING_PANORAMA@STITCHING_SCANS:
         name: STITCHING_SCANS
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_DP_COLOR:
+        name: STITCHING_SEAM_DP_COLOR
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_DP_COLOR_GRAD:
+        name: STITCHING_SEAM_DP_COLOR_GRAD
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_GRAPH_CUT_COLOR:
+        name: STITCHING_SEAM_GRAPH_CUT_COLOR
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_GRAPH_CUT_COLOR_GRAD:
+        name: STITCHING_SEAM_GRAPH_CUT_COLOR_GRAD
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_NO:
+        name: STITCHING_SEAM_NO
+      c:@Ea@STITCHING_SEAM_NO@STITCHING_SEAM_VORONOI:
+        name: STITCHING_SEAM_VORONOI
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_AFFINE:
+        name: STITCHING_WARPER_AFFINE
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_COMPRESSED_RECTILINEAR:
+        name: STITCHING_WARPER_COMPRESSED_RECTILINEAR
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_COMPRESSED_RECTILINEAR_PORTRAIT:
+        name: STITCHING_WARPER_COMPRESSED_RECTILINEAR_PORTRAIT
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_CYLINDRICAL:
+        name: STITCHING_WARPER_CYLINDRICAL
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_FISHEYE:
+        name: STITCHING_WARPER_FISHEYE
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_MERCATOR:
+        name: STITCHING_WARPER_MERCATOR
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_PANINI:
+        name: STITCHING_WARPER_PANINI
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_PANINI_PORTRAIT:
+        name: STITCHING_WARPER_PANINI_PORTRAIT
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_PLANE:
+        name: STITCHING_WARPER_PLANE
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_SPHERICAL:
+        name: STITCHING_WARPER_SPHERICAL
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_STEREOGRAPHIC:
+        name: STITCHING_WARPER_STEREOGRAPHIC
+      c:@Ea@STITCHING_WARPER_PLANE@STITCHING_WARPER_TRANSVERSE_MERCATOR:
+        name: STITCHING_WARPER_TRANSVERSE_MERCATOR
+      c:@Ea@STITCHING_WAVE_CORRECT_HORIZ@STITCHING_WAVE_CORRECT_AUTO:
+        name: STITCHING_WAVE_CORRECT_AUTO
+      c:@Ea@STITCHING_WAVE_CORRECT_HORIZ@STITCHING_WAVE_CORRECT_HORIZ:
+        name: STITCHING_WAVE_CORRECT_HORIZ
+      c:@Ea@STITCHING_WAVE_CORRECT_HORIZ@STITCHING_WAVE_CORRECT_VERT:
+        name: STITCHING_WAVE_CORRECT_VERT
+      c:@F@cv_Blender_close:
+        name: cv_Blender_close
+      c:@F@cv_Blender_create:
+        name: cv_Blender_create
+      c:@F@cv_Blender_get_numBands:
+        name: cv_Blender_get_numBands
+      c:@F@cv_Blender_get_sharpness:
+        name: cv_Blender_get_sharpness
+      c:@F@cv_Blender_set_numBands:
+        name: cv_Blender_set_numBands
+      c:@F@cv_Blender_set_sharpness:
+        name: cv_Blender_set_sharpness
+      c:@F@cv_BundleAdjuster_close:
+        name: cv_BundleAdjuster_close
+      c:@F@cv_BundleAdjuster_create:
+        name: cv_BundleAdjuster_create
+      c:@F@cv_BundleAdjuster_get_confThresh:
+        name: cv_BundleAdjuster_get_confThresh
+      c:@F@cv_BundleAdjuster_get_refinementMask:
+        name: cv_BundleAdjuster_get_refinementMask
+      c:@F@cv_BundleAdjuster_get_termCriteria:
+        name: cv_BundleAdjuster_get_termCriteria
+      c:@F@cv_BundleAdjuster_set_confThresh:
+        name: cv_BundleAdjuster_set_confThresh
+      c:@F@cv_BundleAdjuster_set_refinementMask:
+        name: cv_BundleAdjuster_set_refinementMask
+      c:@F@cv_BundleAdjuster_set_termCriteria:
+        name: cv_BundleAdjuster_set_termCriteria
+      c:@F@cv_Estimator_close:
+        name: cv_Estimator_close
+      c:@F@cv_Estimator_create:
+        name: cv_Estimator_create
+      c:@F@cv_ExposureCompensator_close:
+        name: cv_ExposureCompensator_close
+      c:@F@cv_ExposureCompensator_create:
+        name: cv_ExposureCompensator_create
+      c:@F@cv_ExposureCompensator_get_blockSize:
+        name: cv_ExposureCompensator_get_blockSize
+      c:@F@cv_ExposureCompensator_get_nrFeeds:
+        name: cv_ExposureCompensator_get_nrFeeds
+      c:@F@cv_ExposureCompensator_get_nrGainsFilteringIterations:
+        name: cv_ExposureCompensator_get_nrGainsFilteringIterations
+      c:@F@cv_ExposureCompensator_get_similarityThreshold:
+        name: cv_ExposureCompensator_get_similarityThreshold
+      c:@F@cv_ExposureCompensator_get_updateGain:
+        name: cv_ExposureCompensator_get_updateGain
+      c:@F@cv_ExposureCompensator_set_blockSize:
+        name: cv_ExposureCompensator_set_blockSize
+      c:@F@cv_ExposureCompensator_set_nrFeeds:
+        name: cv_ExposureCompensator_set_nrFeeds
+      c:@F@cv_ExposureCompensator_set_nrGainsFilteringIterations:
+        name: cv_ExposureCompensator_set_nrGainsFilteringIterations
+      c:@F@cv_ExposureCompensator_set_similarityThreshold:
+        name: cv_ExposureCompensator_set_similarityThreshold
+      c:@F@cv_ExposureCompensator_set_updateGain:
+        name: cv_ExposureCompensator_set_updateGain
+      c:@F@cv_FeaturesFinder_close:
+        name: cv_FeaturesFinder_close
+      c:@F@cv_FeaturesFinder_create:
+        name: cv_FeaturesFinder_create
+      c:@F@cv_FeaturesMatcher_close:
+        name: cv_FeaturesMatcher_close
+      c:@F@cv_FeaturesMatcher_collectGarbage:
+        name: cv_FeaturesMatcher_collectGarbage
+      c:@F@cv_FeaturesMatcher_create:
+        name: cv_FeaturesMatcher_create
+      c:@F@cv_FeaturesMatcher_isThreadSafe:
+        name: cv_FeaturesMatcher_isThreadSafe
+      c:@F@cv_RotationWarper_buildMaps:
+        name: cv_RotationWarper_buildMaps
+      c:@F@cv_RotationWarper_close:
+        name: cv_RotationWarper_close
+      c:@F@cv_RotationWarper_create:
+        name: cv_RotationWarper_create
+      c:@F@cv_RotationWarper_get_scale:
+        name: cv_RotationWarper_get_scale
+      c:@F@cv_RotationWarper_set_scale:
+        name: cv_RotationWarper_set_scale
+      c:@F@cv_RotationWarper_warp:
+        name: cv_RotationWarper_warp
+      c:@F@cv_RotationWarper_warpBackward:
+        name: cv_RotationWarper_warpBackward
+      c:@F@cv_RotationWarper_warpPoint:
+        name: cv_RotationWarper_warpPoint
+      c:@F@cv_RotationWarper_warpPointBackward:
+        name: cv_RotationWarper_warpPointBackward
+      c:@F@cv_RotationWarper_warpRoi:
+        name: cv_RotationWarper_warpRoi
+      c:@F@cv_SeamFinder_close:
+        name: cv_SeamFinder_close
+      c:@F@cv_SeamFinder_create:
+        name: cv_SeamFinder_create
+      c:@F@cv_Stitcher_cameras:
+        name: cv_Stitcher_cameras
       c:@F@cv_Stitcher_close:
         name: cv_Stitcher_close
       c:@F@cv_Stitcher_component:
@@ -28,30 +208,72 @@ files:
         name: cv_Stitcher_create
       c:@F@cv_Stitcher_estimateTransform:
         name: cv_Stitcher_estimateTransform
+      c:@F@cv_Stitcher_get_blender:
+        name: cv_Stitcher_get_blender
+      c:@F@cv_Stitcher_get_bundleAdjuster:
+        name: cv_Stitcher_get_bundleAdjuster
       c:@F@cv_Stitcher_get_compositingResol:
         name: cv_Stitcher_get_compositingResol
+      c:@F@cv_Stitcher_get_estimator:
+        name: cv_Stitcher_get_estimator
+      c:@F@cv_Stitcher_get_exposureCompensator:
+        name: cv_Stitcher_get_exposureCompensator
+      c:@F@cv_Stitcher_get_featuresFinder:
+        name: cv_Stitcher_get_featuresFinder
+      c:@F@cv_Stitcher_get_featuresMatcher:
+        name: cv_Stitcher_get_featuresMatcher
       c:@F@cv_Stitcher_get_interpolationFlags:
         name: cv_Stitcher_get_interpolationFlags
+      c:@F@cv_Stitcher_get_matchingMask:
+        name: cv_Stitcher_get_matchingMask
       c:@F@cv_Stitcher_get_panoConfidenceThresh:
         name: cv_Stitcher_get_panoConfidenceThresh
       c:@F@cv_Stitcher_get_registrationResol:
         name: cv_Stitcher_get_registrationResol
       c:@F@cv_Stitcher_get_seamEstimationResol:
         name: cv_Stitcher_get_seamEstimationResol
+      c:@F@cv_Stitcher_get_seamFinder:
+        name: cv_Stitcher_get_seamFinder
+      c:@F@cv_Stitcher_get_warper:
+        name: cv_Stitcher_get_warper
       c:@F@cv_Stitcher_get_waveCorrectKind:
         name: cv_Stitcher_get_waveCorrectKind
       c:@F@cv_Stitcher_get_waveCorrection:
         name: cv_Stitcher_get_waveCorrection
+      c:@F@cv_Stitcher_get_workScale:
+        name: cv_Stitcher_get_workScale
+      c:@F@cv_Stitcher_resultMask:
+        name: cv_Stitcher_resultMask
+      c:@F@cv_Stitcher_setTransform:
+        name: cv_Stitcher_setTransform
+      c:@F@cv_Stitcher_set_blender:
+        name: cv_Stitcher_set_blender
+      c:@F@cv_Stitcher_set_bundleAdjuster:
+        name: cv_Stitcher_set_bundleAdjuster
       c:@F@cv_Stitcher_set_compositingResol:
         name: cv_Stitcher_set_compositingResol
+      c:@F@cv_Stitcher_set_estimator:
+        name: cv_Stitcher_set_estimator
+      c:@F@cv_Stitcher_set_exposureCompensator:
+        name: cv_Stitcher_set_exposureCompensator
+      c:@F@cv_Stitcher_set_featuresFinder:
+        name: cv_Stitcher_set_featuresFinder
+      c:@F@cv_Stitcher_set_featuresMatcher:
+        name: cv_Stitcher_set_featuresMatcher
       c:@F@cv_Stitcher_set_interpolationFlags:
         name: cv_Stitcher_set_interpolationFlags
+      c:@F@cv_Stitcher_set_matchingMask:
+        name: cv_Stitcher_set_matchingMask
       c:@F@cv_Stitcher_set_panoConfidenceThresh:
         name: cv_Stitcher_set_panoConfidenceThresh
       c:@F@cv_Stitcher_set_registrationResol:
         name: cv_Stitcher_set_registrationResol
       c:@F@cv_Stitcher_set_seamEstimationResol:
         name: cv_Stitcher_set_seamEstimationResol
+      c:@F@cv_Stitcher_set_seamFinder:
+        name: cv_Stitcher_set_seamFinder
+      c:@F@cv_Stitcher_set_warper:
+        name: cv_Stitcher_set_warper
       c:@F@cv_Stitcher_set_waveCorrectKind:
         name: cv_Stitcher_set_waveCorrectKind
       c:@F@cv_Stitcher_set_waveCorrection:
@@ -60,14 +282,84 @@ files:
         name: cv_Stitcher_stitch
       c:@F@cv_Stitcher_stitch_1:
         name: cv_Stitcher_stitch_1
+      c:@F@cv_VecCameraParams_close:
+        name: cv_VecCameraParams_close
+      c:@F@cv_VecCameraParams_get:
+        name: cv_VecCameraParams_get
+      c:@F@cv_VecCameraParams_length:
+        name: cv_VecCameraParams_length
+      c:@F@cv_VecCameraParams_new:
+        name: cv_VecCameraParams_new
+      c:@F@cv_VecCameraParams_set:
+        name: cv_VecCameraParams_set
+      c:@F@cv_WarperCreator_close:
+        name: cv_WarperCreator_close
+      c:@F@cv_WarperCreator_create:
+        name: cv_WarperCreator_create
+      c:@F@cv_WarperCreator_createWarper:
+        name: cv_WarperCreator_createWarper
+      c:@F@cv_detail_autoDetectWaveCorrectKind:
+        name: cv_detail_autoDetectWaveCorrectKind
+      c:@F@cv_detail_waveCorrect:
+        name: cv_detail_waveCorrect
+      c:@S@Blender:
+        name: Blender
+      c:@S@BundleAdjuster:
+        name: BundleAdjuster
+      c:@S@Estimator:
+        name: Estimator
+      c:@S@ExposureCompensator:
+        name: ExposureCompensator
+      c:@S@FeaturesFinder:
+        name: FeaturesFinder
+      c:@S@FeaturesMatcher:
+        name: FeaturesMatcher
+      c:@S@RotationWarper:
+        name: RotationWarper
+      c:@S@SeamFinder:
+        name: SeamFinder
       c:@S@Stitcher:
         name: Stitcher
+      c:@S@VecCameraParams:
+        name: VecCameraParams
+      c:@S@WarperCreator:
+        name: WarperCreator
+      c:stitching.h@T@BlenderPtr:
+        name: BlenderPtr
+      c:stitching.h@T@BundleAdjusterPtr:
+        name: BundleAdjusterPtr
+      c:stitching.h@T@EstimatorPtr:
+        name: EstimatorPtr
+      c:stitching.h@T@ExposureCompensatorPtr:
+        name: ExposureCompensatorPtr
+      c:stitching.h@T@FeaturesFinderPtr:
+        name: FeaturesFinderPtr
+      c:stitching.h@T@FeaturesMatcherPtr:
+        name: FeaturesMatcherPtr
+      c:stitching.h@T@RotationWarperPtr:
+        name: RotationWarperPtr
+      c:stitching.h@T@SeamFinderPtr:
+        name: SeamFinderPtr
       c:stitching.h@T@StitcherPtr:
         name: StitcherPtr
+      c:stitching.h@T@VecCameraParamsPtr:
+        name: VecCameraParamsPtr
+      c:stitching.h@T@WarperCreatorPtr:
+        name: WarperCreatorPtr
+      c:types.h@T@CvPoint:
+        name: CvPoint
+      c:types.h@T@CvPoint2f:
+        name: CvPoint2f
+      c:types.h@T@CvRect:
+        name: CvRect
+      c:types.h@T@CvSize:
+        name: CvSize
       c:types.h@T@CvStatus:
         name: CvStatus
       c:types.h@T@Mat:
         name: Mat
+      c:types.h@T@TermCriteria:
+        name: TermCriteria
       c:types.h@T@VecI32:
         name: VecI32
       c:types.h@T@VecMat:
